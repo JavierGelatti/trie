@@ -36,5 +36,5 @@ Bool trie_state_walk (TrieState *s, TrieChar c);
 Bool trie_state_is_walkable (const TrieState *s, TrieChar c);
 Bool trie_state_is_leaf (const TrieState *s);
 TrieData trie_state_get_data (const TrieState *s);
-
+Bool trie_has_key (const Trie *trie, const TrieChar *key);
 
