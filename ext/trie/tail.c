@@ -108,7 +108,7 @@ tail_read (FILE *file)
         int16   length;
 
         file_read_int32 (file, &t->tails[i].next_free);
-        file_read_int32 (file, &t->tails[i].data);
+        file_read_int32 (file, (int32*) &t->tails[i].data);
 
         file_read_int16 (file, &length);
         t->tails[i].suffix    = (TrieChar *) malloc (length + 1);
